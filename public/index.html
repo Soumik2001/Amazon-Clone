@@ -1,0 +1,829 @@
+<!doctype html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Resources/favicon.png" type="image/x-icon">
+    <link href="/public/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <title>Amazon Clone</title>
+
+</head>
+
+<body class="bg-[#e3e6e6]">
+    <header>
+        <nav class=" bg-[#131921] w-full h-[67px] flex justify-evenly items-center text-sm">
+            <a href="#home" class="border border-transparent p-2 hover:border-white hover:rounded-md">
+                <div class="img"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="29" viewBox="0 0 90 29">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="#F90"
+                                d="M55.835 21.326c-5.231 3.81-12.809 5.898-19.339 5.898-9.148 0-17.389-3.358-23.62-9.075-.49-.453-.054-.998.535-.635 6.727 3.902 15.045 6.262 23.638 6.262 5.796 0 12.166-1.18 18.03-3.72.88-.364 1.62.634.756 1.27z" />
+                            <path fill="#F90"
+                                d="M58.012 18.785c-.67-.817-4.421-.363-6.108-.182-.51.09-.59-.363-.131-.726 2.993-2.087 7.9-1.452 8.469-.817.573.726-.151 5.718-2.957 8.077-.432.363-.84.09-.65-.363.633-1.543 2.046-5.082 1.377-5.99z" />
+                            <path fill="#FFF"
+                                d="M52.02 2.995V.907c.004-.272.235-.544.52-.544h9.155c.29 0 .529.272.529.544v1.815c-.004.273-.252.636-.69 1.27L56.792 10.8c1.762-.09 3.623.181 5.223 1.089.362.181.46.544.486.817v2.178c0 .272-.328.635-.673.453-2.819-1.452-6.556-1.633-9.673 0-.319.182-.654-.181-.654-.453v-2.088c0-.363.007-.907.342-1.36l5.495-7.987h-4.785c-.295 0-.53-.181-.533-.453zM70.13 3.085c-2.053 0-2.184 2.814-2.184 4.538 0 1.724-.026 5.535 2.16 5.535 2.16 0 2.26-3.085 2.26-4.9 0-1.18-.053-2.632-.414-3.811-.312-.999-.938-1.362-1.822-1.362zM70.106.181c4.136 0 6.37 3.54 6.37 8.077 0 4.356-2.469 7.804-6.37 7.804-4.055 0-6.268-3.539-6.268-7.986 0-4.446 2.237-7.895 6.268-7.895zM47.534 15.79c-.185.09-.52.09-.66 0-.951-.726-1.598-1.815-1.598-1.815-1.53 1.543-2.611 1.996-4.59 1.996-2.345 0-4.17-1.451-4.17-4.355 0-2.27 1.226-3.812 2.97-4.538 1.51-.726 3.624-.816 5.238-.998 0 0 .133-1.724-.339-2.36-.364-.544-.99-.725-1.563-.725-1.035 0-2.033.544-2.23 1.633-.057.272-.285.545-.527.545L37.397 4.9c-.204-.09-.482-.272-.415-.635C37.605.998 40.562 0 43.214 0c1.356 0 3.127.363 4.195 1.361 1.356 1.27 1.226 2.995 1.226 4.81v4.356c0 1.36.542 1.905 1.051 2.631.178.273.218.545-.01.726-.569.454-2.142 1.906-2.142 1.906zm-2.81-6.897c0 1.09.027 1.997-.52 2.995-.441.817-1.145 1.27-1.928 1.27-1.069 0-1.694-.816-1.694-1.996 0-2.45 2.129-2.813 4.142-2.813v.544zM11.017 15.79c-.184.09-.523.09-.656 0-.951-.726-1.598-1.815-1.598-1.815-1.53 1.543-2.612 1.996-4.59 1.996C1.824 15.971 0 14.52 0 11.616c0-2.27 1.226-3.812 2.97-4.538 1.51-.726 3.623-.816 5.237-.998 0 0 .134-1.724-.338-2.36-.368-.544-.991-.725-1.564-.725-1.034 0-2.032.544-2.23 1.633-.057.272-.284.545-.525.545L.88 4.9c-.204-.09-.482-.272-.415-.635C1.088.998 4.045 0 6.697 0c1.356 0 3.128.363 4.196 1.361 1.356 1.27 1.226 2.995 1.226 4.81v4.356c0 1.36.542 1.905 1.051 2.631.177.273.218.545-.01.726-.57.454-2.143 1.906-2.143 1.906zm-2.81-6.897c0 1.09.027 1.997-.522 2.995-.442.817-1.145 1.27-1.929 1.27-1.068 0-1.694-.816-1.694-1.996 0-2.45 2.13-2.813 4.142-2.813v.544h.003zM19.16 7.623c0-1.634-.076-3.902 1.926-3.902 1.976 0 1.715 2.36 1.715 3.902l.003 7.623c0 .272.22.544.499.544h2.782c.299 0 .536-.272.536-.544V7.623c0-.817-.026-1.997.262-2.723.287-.726.987-1.18 1.663-1.18.808 0 1.43.273 1.639 1.271.13.545.076 2.087.076 2.632v7.623c0 .272.22.544.499.544h2.783c.298 0 .535-.272.535-.544l.004-9.075c0-1.543.18-3.267-.703-4.447C32.6.635 31.326.091 30.154.091c-1.638 0-3.171.907-3.848 2.722C25.526.998 24.435.091 22.694.091c-1.715 0-2.991.907-3.668 2.722h-.053V.998c0-.363-.235-.544-.52-.544h-2.597c-.288 0-.52.181-.52.544v14.248c0 .272.235.544.52.544h2.782c.288 0 .52-.272.52-.544l.003-7.623zM82.382 15.246c0 .272-.235.544-.52.544H79.08c-.288 0-.52-.272-.52-.544V.998c0-.363.235-.544.52-.544h2.572c.3 0 .519.272.519.363v2.178h.054C83.005 1.089 84.096.18 86.022.18c1.249 0 2.47.454 3.25 1.634C90 2.995 90 4.9 90 6.262v9.074c-.03.272-.258.454-.533.454h-2.792c-.259 0-.466-.182-.496-.454l.004-8.711c0-2.904-1.11-2.904-1.748-2.904-.744 0-1.343.544-1.605 1.089-.388.907-.452 1.724-.452 2.722l.004 7.714z" />
+                        </g>
+                    </svg>
+                </div>
+            </a>
+
+
+
+            <div class="text-[#cacaca] text-sm border border-transparent p-2 hover:border-white hover:rounded-md">
+                <p>Deliver to Soumik</p>
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="font-bold text-sm text-white">Howrah 711104</span>
+            </div>
+
+            <div class="text-black flex h-12 relative top-1">
+                <select name="" id="" class="h-10 w-[53px] px-2 rounded-lg rounded-r-none outline-none">
+                    <option value="">All</option>
+                </select>
+                <input type="text" placeholder="Search Amazon.in"
+                    class="h-10 w-[850px] pl-2 placeholder:text-[#7e8181] text-[16px] font-medium outline-none">
+                <div class="w-[53px] h-10 rounded-lg rounded-l-none bg-[#febd69] hover:bg-orange-400  p-3"><i
+                        class="fa-solid fa-magnifying-glass fa-xl text-black"></i></div>
+            </div>
+
+
+
+            <div class="flex items-center border border-transparent p-2 hover:border-white hover:rounded-md">
+                <img src="/Resources/flagIndia.png" class="h-4 w-5" alt="">
+                <select class="bg-transparent font-bold text-[#cacaca]">
+                    <option value="" class="">EN</option>
+                </select>
+            </div>
+
+
+            <div class="text-[#ffffff] border border-transparent p-2 hover:border-white hover:rounded-md">
+                <p class="p-1">Hello,Soumik</p>
+                <select class="bg-transparent font-bold text-white">
+                    <option>Account & Lists</option>
+                </select>
+            </div>
+
+            <div class="text-[#ffffff] border border-transparent p-2 hover:border-white hover:rounded-md">
+                <p class="p-1 text-sm leading-3">Returns</p>
+                <p class="font-bold text-base ">& Orders</p>
+            </div>
+
+
+            <div class="text-white flex items-center border border-transparent p-2 hover:border-white hover:rounded-md">
+                <i class="fa-solid fa-cart-shopping fa-2xl text-orange-400"></i>
+                <p class="font-bold p-1 relative top-1">Cart</p>
+            </div>
+        </nav>
+
+        <nav class="bg-[#232f3e] w-full h-10 flex justify-evenly items-center text-sm">
+            <div
+                class="flex items-center gap-1 text-white border border-transparent p-1 hover:border-white hover:rounded-md">
+                <i class="fa-solid fa-bars fa-lg"></i>
+                <p class="font-bold text-sm p-1">All</p>
+            </div>
+            <ul class="flex items-center justify-evenly text-white gap-1 relative bottom-5">
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Fresh</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Customer Service</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Amazon Pay</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Amazon miniTV</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Sell</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Buy Again</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Home Improvement</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Gift Cards</li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Browsing History <i
+                            class="fa-solid fa-caret-down"></i></li>
+                </a>
+                <a href="#">
+                    <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Amazon Basics</li>
+                </a>
+                <a href="#" <li class="border border-transparent p-2 hover:border-white hover:rounded-md">Soumik's
+                    Amazon.in</li></a>
+            </ul>
+            <div class="">
+                <img src="https://m.media-amazon.com/images/G/31/prime/ACQ/SWM_1._CB583451486_.jpg" alt="">
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Main section Start Here -->
+
+    <main>
+        <!-- Slider Section  -->
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/AmazonPay/Travel/Flash_Sale/April/1_PC_Hero_3000x1200._CB561808983_.jpg"
+                        class="bg-contain" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/TECNOJIO/NLXCREATIVES/DesktopTallHero_3000x1200-copy._CB561882050_.jpg"
+                        class="bg-contain" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/3000x1200-toys-unrec2x-NEW._CB579491525_.jpg"
+                        class="bg-contain" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/MA/april/GW/2-3000._CB561897598_.jpg"
+                        class="bg-contain" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img12/PC/pchigh._CB560056760_.png"
+                        class="bg-contain" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG24/Smart_Watches/MSD_APRIL/3000X1200_Smartwatch_VPC._CB560049415_.jpg"
+                        class="bg-contain" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/PC_Hero_3000x1200._CB560420880_.jpg"
+                        class="bg-contain" alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Fashion/AF/Eidstore/Gateway/GW_PC_Hero_-_2._CB561514618_.jpg"
+                        class="bg-contain" alt=""></div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+        <!-- Product Section Start -->
+
+        <section class="text-gray-600 body-font absolute top-[300px] left-[100px] z-40 mx-auto">
+            <div class="container flex items-center justify-evenly px-5 py-24 mx-auto">
+
+                <div
+                    class=" bg-[#ffffff] shadow-lg shadow-gray-400  rounded-md p-5 aspect-w-1 aspect-h-1 overflow-hidden">
+
+                    <h1 class="font-bold text-black pb-5 text-[25px]">Pick up where you left off</h1>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/71VW8LmqqPL._AC_SY220_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center p-1">Redmi Note 13</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/61OBw+XUiuL._AC_SY220_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center p-1">Lava Agni</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_SY220_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center p-1">iPhone 15</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/71GrK57KgxL._AC_SY220_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center p-1">Narzo 70 Pro 5G</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <p class="font-bold text-[#5294a4] pt-[10px] ">See More</p>
+                </div>
+
+                <div
+                    class=" bg-[#ffffff] shadow-lg shadow-gray-400 rounded-md p-5 aspect-w-1 aspect-h-1 overflow-hidden ml-3 mr-2">
+
+                    <h1 class="font-bold text-black pb-5 text-[25px]">Keep shopping for</h1>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/31Yi1Weh2yL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center p-1">Household Bucket</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/41Sf4XUBhKL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center p-1">Laptops</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/41zKa6UeIQL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center p-1">Cord Switches</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/318TZj1umvL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center pt-5">Hair Dryers</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <p class="font-bold text-sm text-[#5294a4] flex ">View your browsing history</p>
+                </div>
+                <div class=" bg-[#ffffff] shadow-lg shadow-gray-400 rounded-md p-5 overflow-hidden ml-5 mr-5">
+
+                    <h1 class="font-bold text-black pb-5 text-[25px]">Categories to explore</h1>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/41cYSMom9TL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[130px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center pt-5">Mobile cases & co..</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/51rNnH4W+TL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center pt-5">Stationery products</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/415gV21fNCL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center pt-5">Tablets</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shadow-5 shadow-gray-300 rounded-md">
+                                <img src="https://m.media-amazon.com/images/I/31y-oJ1XnqL._MCnd_AC_.jpg" alt="Image 1"
+                                    class="object-contain w-[150px] h-[150px]">
+                                <p class="text-[#6e6f6f] text-xs font-bold text-center pt-5">Mice</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <p class="font-bold text-[#5294a4] pt-[10px]">See More</p>
+                </div>
+                <div
+                    class=" bg-[#ffffff] shadow-lg shadow-gray-400 rounded-md flex justify-evenly items-center p-5 absolute right-[-384px] top-[73px]  overflow-hidden">
+
+                    <h1 class="font-bold text-black pb-5 text-[25px]">Launch your Brand<br>on Amazon<br><span
+                            class="font-bold text-xs text-[#5294a4]">Start Selling Today </span></h1>
+
+
+                    <div class="flex justify-evenly items-center p-2"><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/amazonservices/landing/ATF_imagery_card._CB580109329_.jpg"
+                            class="h-32 w-32 rounded-md hover:scale-125 transition-all duration-500 cursor-pointer"
+                            alt=""> </div>
+
+                </div>
+                <a href="#">
+                    <img src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/6e84ee51-d996-4eb2-aee3-50eaa23c0afa.jpg"
+                        alt="Image 1"
+                        class="object-contain w-[392px] h-[350px] absolute bottom-[96px] shadow-lg shadow-gray-400 rounded-md hover:scale-125 transition-all duration-500 cursor-pointer"></a>
+        </section>
+
+
+
+
+
+        <section class="relative top-[150px] mx-10">
+
+            <div class=" w-full h-[400px]  grid grid-cols-3 gap-4 px-4">
+                <div>
+                    <div class="absolute z-10 left-[25px] top-14 text-white text-[22px]">
+                        <h1>Prime Video: Recommended for you</h1>
+                        <h4 class="text-[18px]">Farzi-Season 1</h4>
+                        <h4 class="text-[12px] absolute bottom-[-220px]">Start watching on Prime Video</h4>
+                    </div>
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/ea7bce0351ae14129a1a3c93c7b00b7922bc3d1ebd2f1fe439b991c0d832ff2a._AC_SL1584_.jpg"
+                        alt=""
+                        class="w-[750px] h-[400px] object-contain rounded-lg hover:scale-125 transition-all duration-500 cursor-pointer">
+
+                </div>
+
+
+                <div class=" shadow-lg shadow-gray-400 rounded-lg grid grid-cols-2 grid-rows-2 gap-2 p-10 mt-7">
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/MFD/P/QC_sportsPCHi._SY232_CB561784372_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Sport Shoes</p>
+                    </div>
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/MFD/P/Pcqc3-2-hi._SY232_CB561784372_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Men's Shoes</p>
+                    </div>
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/MFD/P/Pcqc3-3-hi._SY232_CB561784372_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Women's Shoes</p>
+                    </div>
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/2024/Apr/BTF/MFD/P/Pcqc3-4-hi._SY232_CB561784372_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Handbages</p>
+                    </div>
+
+                    <p class="text-sm text-[#5194a4] hover:font-bold">Mega Fashion Days</p>
+
+                    <h1 class="absolute top-3 text-black font-bold text-[20px] m-4">Footwear & handbags | Up to 60% off
+                    </h1>
+                </div>
+                <div class=" shadow-lg shadow-gray-400 rounded-lg grid grid-cols-2 grid-rows-2 gap-2 p-10 mt-7">
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_372X232_3X7._SY232_CB602731451_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Headsets</p>
+                    </div>
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_372X232_2X6._SY232_CB602731451_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Cables and chargers</p>
+                    </div>
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_372X232_1X5._SY232_CB602731451_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Cases and covers</p>
+                    </div>
+                    <div><img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2023/MSOREFRESHDESKTOP/D87165616_IN_WLA_BAU_MSO_REFRESH-desktop-version_PC_QuadCard_372X232_4X8._SY232_CB602731451_.jpg"
+                            class="shadow-lg shadow-gray-400 rounded-md" alt="">
+                        <p class="text-sm p-2">Powerbanks</p>
+                    </div>
+
+                    <p class="text-sm text-[#5194a4] hover:font-bold">See all offers</p>
+
+                    <h1 class="absolute top-3 text-black font-bold text-[20px] p-2 m-2">Top mobile accessories for your
+                        smartphone</h1>
+                </div>
+
+
+        </section>
+
+
+        <section class="relative mx-10">
+
+            <div class="w-full  h-[220px] absolute top-[105px] ">
+                <h1 class="text-lg font-bold pt-4 relative top-7">Related to items you've viewed
+                </h1><span class="relative top-7 text-[#5194a4]">See more</span>
+
+                <div class="flex items-center justify-evenly p-20 mySwiper">
+                    <div class="flex items-center justify-evenly mx-3 space-x-4">
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/71qTbS09tjL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer ">
+                        </div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/61FTNlVa5OL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/71mfN62MqOL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain  hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/71bDJ9wxxWL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain  hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/81+SKGgJ9yL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain  hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/61nCATx5xTL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/81+SKGgJ9yL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section class="relative mx-10">
+
+            <div class="w-full  h-[220px] absolute top-[505px]">
+                <h1 class="text-lg font-bold pt-4 relative top-7">Up to 50% off | Kitchen essentials curated from stores
+                    near youSee all offers
+                </h1><span class="relative top-7 text-[#5194a4]">See more</span>
+
+                <div class="flex items-center justify-evenly p-20 mySwiper">
+                    <div class="flex items-center justify-evenly mx-3 space-x-4">
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/61H12wqaHNL._AC_SY400_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer">
+                        </div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/61OR687iUFL._AC_SY200_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/719dIB4bZaL._AC_SY200_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/81NBrSAZBHL._AC_SY200_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/718GiMB-EbL._AC_SY200_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/61eH2O5z2AL._AC_SY200_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+                        <div class="swiper-slide1"><img
+                                src="https://m.media-amazon.com/images/I/41SU6aFw5TL._AC_SY200_.jpg"
+                                class="h-56 w-76 object-contain hover:scale-125 transition-all duration-500 cursor-pointer"
+                                alt=""></div>
+
+                    </div>
+                </div>
+        </section>
+
+
+
+    </main>
+
+    <main class="relative top-[850px] ">
+        <div>
+            <h1 class="text-2xl text-center text-black relative top-12 font-bold">More items to consider</h1>
+        </div>
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20">
+
+                    <div class="flex flex-wrap -m-4">
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/61mv2aQ6ntL._AC_UY218_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">GOVO</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">GOSURROUND 945 | 120W</h2>
+                                <p class="leading-relaxed text-base">Soundbar, 5.1 Channel Home Theatre with 5.25"
+                                    subwoofer, Dual Rear Satellites, AUX, USB & Bluetooth, 3 Equalizer Modes, Stylish
+                                    Remote & LED Display (Platinum Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/71RErpRQ4OL._AC_UY218_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">ZEBRONICS
+                                </h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Juke BAR 3902</h2>
+                                <p class="leading-relaxed text-base">Soundbar with 100 Watts, HDMI (ARC), Optical, USB,
+                                    AUX, Bluetooth v5.0, Virtual 5.1, Wall Mountable Design.</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-cover object-center mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/41QhWiCJsCL._AC_UY218_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Samsung
+                                    Soundbar</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">(HW-C45E/XL) 2.1</h2>
+                                <p class="leading-relaxed text-base">2.1 Channel, 300W, Dolby Digital, 3 Speakers,
+                                    Wireless Subwoofer, Bluetooth Enabled and DTS Virtual X Experience Sound (Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/61qKiT8j2rL._AC_UY218_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">boAt</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Aavante Bar Orion Soundbar
+                                </h2>
+                                <p class="leading-relaxed text-base">Soundbar with 160W RMS Signature Sound, 2.1 CH, BT
+                                    v5.3, Multi-Compatibility Modes, Wired Subwoofer, EQ Controls, Dynamic LEDs & Master
+                                    Remote Control(Pitch Black)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div>
+            <h1 class="text-2xl text-center text-black relative top-[-100px] font-bold">Min. 60% off | Smart TV's</h1>
+        </div>
+        <section class="text-gray-600 body-font relative top-[-100px]">
+            <div class="container px-5 mx-auto">
+                <div class="flex flex-wrap w-full mb-20">
+
+                    <div class="flex flex-wrap -m-4">
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/715-IBd7vlL._AC_UY436_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Sony Bravia</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">108 cm (43 inches) 4K</h2>
+                                <p class="leading-relaxed text-base">Sony Bravia 108 cm (43 inches) 4K Ultra HD Smart LED Google TV KD-43X64L (Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/819Lw2PE8tL._AC_UY436_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Redmi
+                                </h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">80 cm (32 inches)</h2>
+                                <p class="leading-relaxed text-base">Redmi 80 cm (32 inches) F Series HD Ready Smart LED Fire TV L32R8-FVIN (Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/819SRH2DKBL._AC_UY436_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">OnePlus</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">108 cm (43 inches)4K</h2>
+                                <p class="leading-relaxed text-base">OnePlus 108 cm (43 inches) Y Series 4K Ultra HD Smart Android LED TV 43Y1S Pro (Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/717oSOB4hCL._AC_UY436_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">VW</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">80 cm (32 inches)
+                                </h2>
+                                <p class="leading-relaxed text-base">VW 80 cm (32 inches) Playwall Frameless Series HD Ready Android Smart LED TV VW3251 (Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/71VxR1hTCdL._AC_UY436_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Hisense</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">108 cm (43 inches) 4K
+                                </h2>
+                                <p class="leading-relaxed text-base">108 cm (43 inches) Bezelless Series 4K Ultra HD Smart LED Google TV 43A6K (Gray)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/71hXI6RMKXL._AC_SX296_SY426_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">iFFALCON</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">108 cm (43 inches) 4K
+                                </h2>
+                                <p class="leading-relaxed text-base">iFFALCON 108 cm (43 inches) 4K Ultra HD Smart LED Google TV iFF43U62 (Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/61OhVH03xpL._AC_SX296_SY426_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Hisense</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">108 cm (43 inches) 4K
+                                </h2>
+                                <p class="leading-relaxed text-base">Hisense 108 cm (43 inches) 4K Ultra HD Smart QLED TV 43E7K (Black)</p>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 p-4">
+                            <div class="bg-gray-100 p-6 rounded-lg">
+                                <img class="h-40 rounded w-full object-contain mb-6 hover:scale-125 transition-all duration-500 cursor-pointer"
+                                    src="https://m.media-amazon.com/images/I/81zlF3XIJ3L._AC_SX296_SY426_FMwebp_QL65_.jpg" alt="content">
+                                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">KODAK</h3>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">108 cm (43 inches) 4K
+                                </h2>
+                                <p class="leading-relaxed text-base">Kodak 108 cm (43 inches) 4K Ultra HD Smart QLED TV 43MT5055 (Black)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+
+
+        <section class="text-gray-600 body-font">
+            <div class="relative mx-12">
+            <h1 class="text-[25px] font-bold text-black">Your browsing history <span class="text-[15px] font-normal text-[#8083f3]">View or edit your browsing history</span></h1></div>
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                    <p class="mt-1">$16.00</p>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+                    <p class="mt-1">$21.15</p>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+                    <p class="mt-1">$12.00</p>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+                    <p class="mt-1">$18.40</p>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                    <p class="mt-1">$16.00</p>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+                    <p class="mt-1">$21.15</p>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+                    <p class="mt-1">$12.00</p>
+                  </div>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                  <a class="block relative h-48 rounded overflow-hidden">
+                    <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+                  </a>
+                  <div class="mt-4">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+                    <p class="mt-1">$18.40</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+
+
+
+    <!--  Footer Section start here -->
+
+    <footer class="relative top-[1550px]">
+        <a href="#">
+            <div class="firstpanel">
+                Back to top
+            </div>
+        </a>
+        <div class="secondpanel">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on Amazon</a>
+                <a>Sell on Amazon Business</a>
+                <a>Sell apps on Amazon</a>
+                <a>Become an Affiliate</a>
+                <a>Self-Publish with Us</a>
+                <a>Host an Amazon Hub</a>
+                <a>›See More Make Money with Us</a>
+            </ul>
+            <ul>
+                <p>Amazon Payment Products</p>
+                <a>Amazon Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+                <a>Amazon Currency Converter</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Amazon and COVID-19</a>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content and Devices</a>
+                <a>Amazon Assistant</a>
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="thirdpanel">
+            <div class="logo"></div>
+            <div class="select-op">
+                <select name="" id="" class="sele">
+                    <option value="En">English</option>
+                </select>
+                <select name="" id="" class="sele">
+                    <option value="1">₹ INR - Indian Rupees</option>
+                </select>
+
+                <select name="" id="" class="sele">
+                    <option value="4"> India</option>
+                </select>
+            </div>
+        </div>
+        <div class="panel4">
+            <div class="page">
+                <a href="">Conditions of Use</a>
+                <a href="">Privacy Notice</a>
+                <a href="">Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 1996-2024, Amazon.com, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        var swiper1 = new Swiper(".s1", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next1",
+                prevEl: ".swiper-button-prev1",
+            },
+        });
+
+    </script>
+</body>
+
+</html>
