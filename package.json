@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "amazon": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+    "amazon": "npx tailwindcss -i ./src/input.css -o ./style.css --watch"
   },
   "keywords": [],
   "author": "",
